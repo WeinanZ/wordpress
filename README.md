@@ -17,11 +17,13 @@ wordpress-gitops/
 🔹 1. Open the Argo CD UI
 
 oc get route -n openshift-gitops
+
+
 🔹 2. Click “New App”
 
 In the top right, click the “NEW APP” button.
 
-⸻
+
 
 🔹 3. Fill Out the Form
 
@@ -44,21 +46,21 @@ In the top right, click the “NEW APP” button.
 	•	✔️ Self Heal
 	•	✔️ Prune Resources
 
-⸻
 
 🔹 4. Click “Create”
 
 This will create the Argo CD Application resource.
 
-⸻
 
 🔹 5. Sync the App
 
 After the app appears in the dashboard:
+
 	•	Click on the App tile
 	•	Click “SYNC” → then “SYNCHRONIZE”
 
 Argo CD will now:
+
 	•	Pull manifests from your Git repo
 	•	Deploy them to the specified OpenShift namespace
 	•	Show the live deployment graph
