@@ -2,3 +2,6 @@ resources:
   - base/deployment.yaml
   - base/service.yaml
   - base/route.yaml
+  - base/mariadb-secret.yaml
+  - base/mariadb-deployment.yaml
+  - base/mariadb-service.yaml
