@@ -2,8 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wordpress
+  namespace: wordpress
+  labels:
+    app: wordpress
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: wordpress
@@ -28,11 +31,10 @@ spec:
             - name: WORDPRESS_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                name: mariadb-secret
-                key: mariadb-password
+                  name: mariadb-secret
+                  key: mariadb-password
             - name: WORDPRESS_DB_NAME
               valueFrom:
                 secretKeyRef:
                   name: mariadb-secret
                   key: mariadb-database
-          
